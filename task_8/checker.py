@@ -23,15 +23,11 @@ def check_json():
 
 def check_log_passw():
     lst = json_in_list.json_in_lst('users.json')
-    # print(lst, len(lst))
     log = input('Введите логин: ')
     passw = input('Введите пароль: ')
     consilience = False # совпадение
-    # print(lst[1]['log'],log, lst[1]['passw'], passw)
 
     for i in lst:
-        # print(i, i['log'],log, i['passw'], passw)
-
         if (i['log'] == log) and (i['passw'] == passw):
             user_stat = i['user_status']
             user_name = i['name']
@@ -42,8 +38,7 @@ def check_log_passw():
     
     if consilience:
         print('корректный ввод')
-        
-        print(user_stat)
+        # print(user_stat)
         return user_stat, user_name, department
 
 
@@ -55,4 +50,3 @@ def check_log_passw():
             pass
 
 
-# check_log_passw()
